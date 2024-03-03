@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:13
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5432:5432"
+  test_db:
+    image: postgres:13
+    env_file:
+      - ./backend/.env.test
+    ports:
+      - "5433:5432"
