@@ -23,35 +23,52 @@ Follow these steps to get your development environment set up:
 
 1. **Clone the repository**
 
-    ```bash
-    git clone https://github.com/UrielOfir/cats-app.git
-    cd cats-app
-    ```
+   ```bash
+   git clone https://github.com/UrielOfir/cats-app.git
+   cd cats-app
+   ```
 
 2. **Running the Database with Docker**
 
-    Build and start the database using Docker:
+   Build and start the database using Docker:
 
-    ```bash
-    docker-compose build
-    docker-compose up -d
-    ```
+   ```bash
+   docker-compose build
+   docker-compose up -d
+   ```
 
-3. **Setting up the Application**
+3. **Environment Setup**   
+   To run the Cats App successfully, you'll need to configure your environment variables for both development and testing environments. The project includes example environment files to guide you through this process.
+   #### Creating Environment Files
+    a. **Development Environment File**:
+   - Navigate to the `backend` directory.
+   - Locate the `example.env` file. This file contains a template of the environment variables needed for the application to run.
+   - Create a new file named `.env` in the same directory.
+   - Copy the contents of `example.env` into your `.env` file.
+   
+   b. **Test Environment File**:
+   - In the `backend` directory, find the `example.env.test` file. This serves as a template for the environment variables required during testing.
+   - Create a new file named `.env.test` in the same directory.
+   - Copy the contents from `example.env.test` to `.env.test`.
 
-    Install dependencies and run the frontend and backend applications:
+    ##### Note on Environment Variables
+    The environment variables include configurations for your database, API keys, and other sensitive information that should not be shared publicly. Ensure that your `.env` and `.env.test` files are added to your `.gitignore` to prevent them from being committed to your version control system.
 
-    - Install dependencies for both the backend and frontend:
-      
-      ```bash
-      npm run install:all
-      ```
+4. **Setting up the Application**
 
-    - Start the application in development mode with hot reload enabled:
-      
-      ```bash
-      npm run start:dev
-      ```
+   Install dependencies and run the frontend and backend applications:
+
+   - Install dependencies for both the backend and frontend:
+
+     ```bash
+     npm run install:all
+     ```
+
+   - Start the application in development mode with hot reload enabled:
+
+     ```bash
+     npm run start:dev
+     ```
 
 ## Technologies
 
@@ -78,6 +95,7 @@ The Cats App backend is equipped with Swagger, a powerful tool for interactive A
 - **Explore API Endpoints**: The Swagger UI provides a list of all available API endpoints, including descriptions of what they do, the request parameters they accept, and the response models they return.
 
 - **Try Out Endpoints**: You can execute API requests directly from the Swagger UI. To do so:
+
   1. Click on an endpoint to expand its details.
   2. Click the "Try it out" button.
   3. Fill in any required parameters.
@@ -97,4 +115,4 @@ Swagger UI is an invaluable tool for both development and testing. It simplifies
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-*Thank you for exploring the Cats App. We hope you enjoy using it as much as we enjoyed building it!*
+_Thank you for exploring the Cats App. We hope you enjoy using it as much as we enjoyed building it!_
