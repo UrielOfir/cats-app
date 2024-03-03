@@ -9,12 +9,11 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true, // Makes the ConfigModule globally available throughout your application
-      envFilePath: '.env', // Load test environment variables
+      envFilePath: '.env',
     }),
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule], // Make sure ConfigModule is imported
+      imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
-        // Determine if the application is running in a test environment
         const isTestEnv = configService.get('NODE_ENV') === 'test';
         const path = __dirname + '/**/*.entity{.ts,.js}';
         const baseOptions = {

@@ -8,8 +8,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
 
-  // Use the ConfigService to get the PORT environment variable
-  // Default to 3000 if it's not defined
   const port = configService.get<number>('PORT', 3000);
 
   const allowedOrigins = configService
