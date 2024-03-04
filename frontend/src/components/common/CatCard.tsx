@@ -1,4 +1,3 @@
-// src/components/CatCard.tsx
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,6 +9,8 @@ import { LocationOn, Cake, FavoriteBorder, Favorite } from '@mui/icons-material'
 import { Cat } from '../../types';
 import { calculateAge } from '../../utils/utils';
 
+//TODO: when clicked liked button render only the button with the new number of likes
+
 type CatCardProps = {
   cat: Cat;
   onLike?: () => Promise<void>;
@@ -17,7 +18,6 @@ type CatCardProps = {
 };
 
 const CatCard: React.FC<CatCardProps> = ({ cat, onLike, isLiked }) => {
-  console.log('isLiked:', isLiked);
   return (
     <Card sx={{ m: 2, maxWidth: '30vw' }}>
       <CardMedia component="img" image={cat.image} alt={cat.name} sx={{ maxHeight: '30vw', maxWidth: '30vw' }} />

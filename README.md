@@ -1,5 +1,3 @@
-TODO: add example.and instructions
-
 # Cats App
 
 ## Features

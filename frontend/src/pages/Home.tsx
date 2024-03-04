@@ -5,8 +5,6 @@ import CatCard from '../components/common/CatCard';
 import { useNavigate } from 'react-router-dom';
 import SearchInput from '../components/common/SearchTerm';
 
-//TODO: make search bar as input
-
 //TODO: new card for favorite cats
 
 const Home: React.FC = () => {
