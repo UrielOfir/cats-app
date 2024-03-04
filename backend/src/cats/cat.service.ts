@@ -88,9 +88,9 @@ export class CatService {
     catId: string;
   }): Promise<CatVoteResponse> {
     try {
-      const { session, error } = await this.createCatSession({
+      const { session, error } = await this.createCatLikeSession({
         catId,
-        sessionId,
+        likeSessionId: sessionId,
       });
       const cat = await this.getCatById(catId);
 
@@ -106,21 +106,25 @@ export class CatService {
     }
   }
 
-  async createCatSession({
+  async createCatLikeSession({
     catId,
-    sessionId,
-  }): Promise<{ session: CatSession } & { error?: string }> {
+    likeSessionId,
+  }): Promise<{ session: CatSession } & { error?: string; message?: string }> {
     const existingSession = await this.catSessionRepository.findOne({
-      where: { cat_id: catId, session_id: sessionId },
+      where: { cat_id: catId, session_id: likeSessionId },
     });
 
     if (existingSession) {
-      return { session: existingSession, error: 'already voted for this cat' };
+      await this.catSessionRepository.remove(existingSession);
+      return {
+        session: existingSession,
+        message: 'cat unliked successfully!',
+      };
     }
 
     const newSession = this.catSessionRepository.create({
       cat_id: catId,
-      session_id: sessionId,
+      session_id: likeSessionId,
     });
 
     await this.catSessionRepository.save(newSession);
@@ -132,12 +136,12 @@ export class CatService {
     const cat_ids = cats.map((cat: Cat) => cat.id);
     for (let i = 0; i < number; i++) {
       const cat_id: any = cat_ids[Math.floor(Math.random() * cat_ids.length)];
-      const catSession = this.catSessionRepository.create({
+      const catLikeSession = this.catSessionRepository.create({
         session_id: makeUuid(),
         cat_id: cat_id,
       });
 
-      await this.catSessionRepository.save(catSession);
+      await this.catSessionRepository.save(catLikeSession);
     }
   }
 
