@@ -9,7 +9,7 @@
 
 For a visual demonstration of the CRAZY CATS app in action, showcasing its functionality and confirming the effectiveness of the code, check out our video. This walkthrough gives you a glimpse into the user experience, including how to browse through the cat database and participate in voting for your favorite cats. It's a great way to see the application's features live and to verify the project's setup and operation.
 
-[![CRAZY CATS App Demonstration](https://img.youtube.com/vi/4XnHJN5mt-4/0.jpg)](https://youtu.be/4XnHJN5mt-4 'CRAZY CATS App Demonstration')
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4XnHJN5mt-4?si=pFl872aSMUc37JBH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Getting Started
 
