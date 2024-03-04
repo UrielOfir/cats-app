@@ -11,7 +11,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1,  }}>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-              CATS-APP
+              CRAZY CATS
             </Link>
           </Typography>
 

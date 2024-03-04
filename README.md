@@ -1,4 +1,4 @@
-# Cats App
+# CRAZY CATS
 
 ## Features
 
@@ -22,8 +22,8 @@ Follow these steps to get your development environment set up:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/UrielOfir/cats-app.git
-   cd cats-app
+   git clone https://github.com/UrielOfir/CRAZY-CATS.git
+   cd CRAZY-CATS
    ```
 
 2. **Running the Database with Docker**
@@ -36,7 +36,7 @@ Follow these steps to get your development environment set up:
    ```
 
 3. **Environment Setup**   
-   To run the Cats App successfully, you'll need to configure your environment variables for both development and testing environments. The project includes example environment files to guide you through this process.
+   To run the CRAZY CATS successfully, you'll need to configure your environment variables for both development and testing environments. The project includes example environment files to guide you through this process.
    #### Creating Environment Files
     a. **Development Environment File**:
    - Navigate to the `backend` directory.
@@ -80,7 +80,7 @@ This project is built using the following technologies:
 
 ## API Documentation with Swagger
 
-The Cats App backend is equipped with Swagger, a powerful tool for interactive API documentation. Swagger allows you to test out the API endpoints directly through your web browser without needing any additional tools like Postman. Here's how you can access and use the Swagger UI:
+The CRAZY CATS backend is equipped with Swagger, a powerful tool for interactive API documentation. Swagger allows you to test out the API endpoints directly through your web browser without needing any additional tools like Postman. Here's how you can access and use the Swagger UI:
 
 ### Accessing Swagger UI
 
@@ -105,12 +105,12 @@ The Cats App backend is equipped with Swagger, a powerful tool for interactive A
 
 - **Ease of Use**: Quickly test and explore backend functionalities without writing any code or using additional tools.
 - **Real-time Documentation**: Swagger UI reflects the current state of your API, ensuring that the documentation is always up to date.
-- **Interactive Learning**: For developers new to the Cats App project, Swagger serves as an interactive learning tool, making it easier to understand the capabilities of the backend services.
+- **Interactive Learning**: For developers new to the CRAZY CATS project, Swagger serves as an interactive learning tool, making it easier to understand the capabilities of the backend services.
 
-Swagger UI is an invaluable tool for both development and testing. It simplifies the process of interacting with the Cats App backend, making it accessible to developers and testers of all skill levels.
+Swagger UI is an invaluable tool for both development and testing. It simplifies the process of interacting with the CRAZY CATS backend, making it accessible to developers and testers of all skill levels.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-_Thank you for exploring the Cats App. We hope you enjoy using it as much as we enjoyed building it!_
+_Thank you for exploring the CRAZY CATS. We hope you enjoy using it as much as we enjoyed building it!_
