@@ -168,11 +168,6 @@ export class CatService {
     }
   }
 
-  private async truncateTables(): Promise<void> {
-    await this.catRepository.query('TRUNCATE TABLE cat_session CASCADE');
-    await this.catRepository.query('TRUNCATE TABLE cat CASCADE');
-  }
-
   private removePrefix(cat: Cat) {
     return Object.keys(cat).reduce((acc, key) => {
       const newKey = key.replace('cat_', '');
