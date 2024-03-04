@@ -1,6 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { CatSession } from './catSession.entity';
 
+//TODO: add fur color column
 @Entity()
 export class Cat {
   @PrimaryGeneratedColumn('uuid')
