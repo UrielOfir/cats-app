@@ -12,6 +12,7 @@ For a visual demonstration of the CRAZY CATS app in action, showcasing its funct
 <a href="https://youtu.be/4XnHJN5mt-4" target="_blank">
   <img src="https://img.youtube.com/vi/4XnHJN5mt-4/0.jpg" alt="CRAZY CATS App Demonstration">
 </a>
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
