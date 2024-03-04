@@ -5,15 +5,16 @@
 - **Cat Lookup**: Browse through a comprehensive database of cats, including details like name, birth date, location, and preferences.
 - **Vote for Cats**: Show your love for your favorite cats by voting for them. See which cats are the most popular among the community.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ## Video Demonstration
 
 For a visual demonstration of the CRAZY CATS app in action, showcasing its functionality and confirming the effectiveness of the code, check out our video. This walkthrough gives you a glimpse into the user experience, including how to browse through the cat database and participate in voting for your favorite cats. It's a great way to see the application's features live and to verify the project's setup and operation.
 
-[![CRAZY CATS App Demonstration](https://img.youtube.com/vi/4XnHJN5mt-4/0.jpg)](https://youtu.be/4XnHJN5mt-4 'CRAZY CATS App Demonstration')
+<a href="https://youtu.be/4XnHJN5mt-4" target="_blank">
+  <img src="https://img.youtube.com/vi/4XnHJN5mt-4/0.jpg" alt="CRAZY CATS App Demonstration">
+</a>
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -41,22 +42,27 @@ Follow these steps to get your development environment set up:
    docker-compose up -d
    ```
 
-3. **Environment Setup**   
+3. **Environment Setup**  
    To run the CRAZY CATS successfully, you'll need to configure your environment variables for both development and testing environments. The project includes example environment files to guide you through this process.
+
    #### Creating Environment Files
-    a. **Development Environment File**:
+
+   a. **Development Environment File**:
+
    - Navigate to the `backend` directory.
    - Locate the `example.env` file. This file contains a template of the environment variables needed for the application to run.
    - Create a new file named `.env` in the same directory.
    - Copy the contents of `example.env` into your `.env` file.
-   
+
    b. **Test Environment File**:
+
    - In the `backend` directory, find the `example.env.test` file. This serves as a template for the environment variables required during testing.
    - Create a new file named `.env.test` in the same directory.
    - Copy the contents from `example.env.test` to `.env.test`.
 
-    ##### Note on Environment Variables
-    The environment variables include configurations for your database, API keys, and other sensitive information that should not be shared publicly. Ensure that your `.env` and `.env.test` files are added to your `.gitignore` to prevent them from being committed to your version control system.
+   ##### Note on Environment Variables
+
+   The environment variables include configurations for your database, API keys, and other sensitive information that should not be shared publicly. Ensure that your `.env` and `.env.test` files are added to your `.gitignore` to prevent them from being committed to your version control system.
 
 4. **Setting up the Application**
 
