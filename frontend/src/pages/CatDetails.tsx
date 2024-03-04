@@ -20,16 +20,20 @@ const CatDetails: React.FC = () => {
   };
 
   const [displayCat, setDisplayCat] = useState<Cat>(cat);
+  const [isLiked, setIsLiked] = useState<boolean>(false);
 
   const [likeCat, { isLoading, isError, isSuccess, data }] = useLikeCatMutation();
 
   const handleLike = async () => {
-      const response = await likeCat({ id: cat.id });
+    const response = await likeCat({ id: cat.id });
 
-      if ('error' in response && response.error) {
-        console.error('Error liking cat:', response.error);
-      }
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    response.data.catSession.id ? setIsLiked(true) : setIsLiked(false);
 
+    if ('error' in response && response.error) {
+      console.error('Error liking cat:', response.error);
+    }
   };
 
   useEffect(() => {
@@ -58,7 +62,7 @@ const CatDetails: React.FC = () => {
         alignItems: 'center',
       }}
     >
-      <CatCard cat={displayCat} onLike={handleLike} />
+      <CatCard cat={displayCat} onLike={handleLike} isLiked={isLiked} />
     </Grid>
   );
 };

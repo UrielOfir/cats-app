@@ -6,16 +6,18 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
-import { LocationOn, Cake, FavoriteBorder } from '@mui/icons-material';
+import { LocationOn, Cake, FavoriteBorder, Favorite } from '@mui/icons-material';
 import { Cat } from '../../types';
 import { calculateAge } from '../../utils/utils';
 
 type CatCardProps = {
   cat: Cat;
   onLike?: () => Promise<void>;
+  isLiked?: boolean;
 };
 
-const CatCard: React.FC<CatCardProps> = ({ cat, onLike }) => {
+const CatCard: React.FC<CatCardProps> = ({ cat, onLike, isLiked }) => {
+  console.log('isLiked:', isLiked);
   return (
     <Card sx={{ m: 2, maxWidth: '30vw' }}>
       <CardMedia component="img" image={cat.image} alt={cat.name} sx={{ maxHeight: '30vw', maxWidth: '30vw' }} />
@@ -41,8 +43,8 @@ const CatCard: React.FC<CatCardProps> = ({ cat, onLike }) => {
       </CardContent>
       <CardActions>
         <Button onClick={onLike} size="small" color="primary">
-          {/* should change to Favorite when liked */}
-          <FavoriteBorder fontSize="small" /> Like ({cat.likes})
+          {isLiked ? <Favorite fontSize="small" /> : <FavoriteBorder fontSize="small" />}
+          Like ({cat.likes})
         </Button>
       </CardActions>
     </Card>
